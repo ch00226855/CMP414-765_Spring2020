@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Estimator</title>
+</head>
+<body>
+    <h1>Salary Estimator</h1>
+    
+    <!-- <form action="temp.html" method="post"> -->
+    <form action="{{ url_for('predict') }}" method="post">
+        Experience: <input type="text" name="experience" required="required" /><br />
+        Test Score: <input type="text" name="test_score" required="required" /><br />
+        Interview Score: <input type="text" name="interview_score" required="required" /><br />
+        <button type="submit">Predict</button>
+    </form>
+
+    {{ prediction_text }}
+</body>
+</html>
